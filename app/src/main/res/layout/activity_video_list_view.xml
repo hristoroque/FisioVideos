@@ -33,6 +33,7 @@
                 android:layout_height="wrap_content"
                 android:onClick="goToVideoDetailView"
                 android:text="Ir a detalle" />
+
         </TableRow>
 
         <TableRow
