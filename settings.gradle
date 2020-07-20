@@ -1,0 +1,2 @@
+rootProject.name='FisioVideos'
+include ':app'
