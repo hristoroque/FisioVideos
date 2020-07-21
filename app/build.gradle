@@ -34,3 +34,5 @@ dependencies {
 
     implementation 'com.google.vr:sdk-videowidget:1.70.0'
 }
+
+android.defaultConfig.vectorDrawables.useSupportLibrary = true
