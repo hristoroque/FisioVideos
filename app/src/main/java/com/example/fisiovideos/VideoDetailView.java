@@ -18,4 +18,9 @@ public class VideoDetailView extends AppCompatActivity {
         Intent intent = new Intent(this,VideoListView.class);
         startActivity(intent);
     }
+
+    public void goToVideo360(View view){
+        Intent intent = new Intent(this,Video360.class);
+        startActivity(intent);
+    }
 }
