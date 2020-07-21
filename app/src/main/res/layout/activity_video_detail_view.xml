@@ -39,40 +39,42 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/description"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.814"
+        app:layout_constraintHorizontal_bias="0.77"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.658" />
+        app:layout_constraintVertical_bias="0.609" />
 
     <TextView
         android:id="@+id/description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="40dp"
         android:text="Descripción del Texto"
         app:layout_constraintBottom_toTopOf="@+id/help"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.854"
+        app:layout_constraintHorizontal_bias="0.811"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/help"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="24dp"
         android:text="Este video te ayudará a ...."
-        app:layout_constraintBottom_toTopOf="@+id/playBtn"
+        app:layout_constraintBottom_toTopOf="@+id/btnVideo360"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintHorizontal_bias="0.814"
         app:layout_constraintStart_toStartOf="parent" />
+
     <Button
         android:id="@+id/btnVideo360"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="124dp"
         android:onClick="goToVideo360"
         android:text="Ver video 360º"
-        app:layout_constraintTop_toBottomOf="@+id/button"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintStart_toEndOf="@+id/imageView" />
 </androidx.constraintlayout.widget.ConstraintLayout>
