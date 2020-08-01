@@ -53,9 +53,11 @@
     <Button
         android:id="@+id/signupBtn"
         style="@style/TextViewBase"
+        android:background="@color/colorPrimary"
         android:onClick="goToVideoListView"
         android:text="@string/text_person_button"
         android:textAlignment="center"
+        android:textColor="@color/design_default_color_on_primary"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvProvider"/>
+        app:layout_constraintTop_toBottomOf="@id/tvProvider" />
 </androidx.constraintlayout.widget.ConstraintLayout>
