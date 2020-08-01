@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.fisiovideos">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:screenOrientation="landscape"
         android:allowBackup="true"
@@ -13,7 +15,8 @@
         <activity android:name=".VideoDetailView"></activity>
         <activity android:name=".VideoListView" />
         <activity android:name=".Video360"/>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

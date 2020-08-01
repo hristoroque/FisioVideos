@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "613596662457",
+    "firebase_url": "https://fisiovideos-f1409.firebaseio.com",
+    "project_id": "fisiovideos-f1409",
+    "storage_bucket": "fisiovideos-f1409.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613596662457:android:f027e73dcb8c51f2d12968",
+        "android_client_info": {
+          "package_name": "com.example.fisiovideos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "613596662457-tvpoejolv8qbeb6vd5t1g6crhjnbkp27.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fisiovideos",
+            "certificate_hash": "17386e23407567a927ce669edb2c63b5c5d964e0"
+          }
+        },
+        {
+          "client_id": "613596662457-62jgijbu8gpusadu7h3ppi0d37g0ormc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1GegM5hUoshrViHNbjPNLZSHs1EVgzmw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "613596662457-62jgijbu8gpusadu7h3ppi0d37g0ormc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

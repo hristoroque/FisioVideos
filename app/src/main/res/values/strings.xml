@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">FisioVideos</string>
+    <string name="hint_person_name">Nombre</string>
+    <string name="hint_person_email">Correo</string>
+    <string name="hint_person_provider">Proveedor</string>
+    <string name="main_menu_signOut">Cerrar Sesión</string>
+    <string name="text_person_button">Ver Videos</string>
+    <string name="hint_person_title">BIENVENIDO!</string>
 </resources>
