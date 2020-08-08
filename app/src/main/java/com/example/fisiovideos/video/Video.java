@@ -4,6 +4,7 @@ public class Video {
     private String id;
     private String name;
     private String description;
+    private String photoUrl;
 
     public Video(){
 
@@ -44,6 +45,13 @@ public class Video {
         this.description = description;
     }
 
+    public String getPhotoUrl() {
+        return photoUrl;
+    }
+
+    public void setPhotoUrl(String photoUrl) {
+        this.photoUrl = photoUrl;
+    }
     // equals and hasCode unicamente con el ID
     @Override
     public boolean equals(Object o) {
