@@ -31,10 +31,6 @@ public class VideoListView extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
     private ArrayList<String> nombre_ejercicios;
-    private static final String PATH_VIDEOS = "videos";
-    private static final String PATH_VIDEO = "video";
-    private static final String PATH_NAME = "name";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,9 +49,9 @@ public class VideoListView extends AppCompatActivity {
 
     private void agregarEjercicios(final ArrayList<String> nombre_ejercicios) {
 
-        Video video1 = new Video("video1","algo de este video supongo");
-        Video video2 = new Video("video2","algo de este video supongo 2");
-        Video video3 = new Video("video3","algo de este video supongo 2");
+        Video video1 = new Video("RODILLA","algo de este video supongo");
+        Video video2 = new Video("BRAZO","algo de este video supongo 2");
+        Video video3 = new Video("CUELLO","algo de este video supongo 2");
 
         /*
        FirebaseDatabase database = FirebaseDatabase.getInstance();
