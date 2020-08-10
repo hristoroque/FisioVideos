@@ -53,11 +53,39 @@
     <Button
         android:id="@+id/signupBtn"
         style="@style/TextViewBase"
+        android:layout_marginTop="20dp"
         android:background="@color/colorPrimary"
         android:onClick="goToVideoListView"
         android:text="@string/text_person_button"
         android:textAlignment="center"
         android:textColor="@color/design_default_color_on_primary"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvProvider" />
+
+    <Button
+        android:id="@+id/registerbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+        android:onClick="goToRegistrarPaciente"
+        android:text="Registrar Personas"
+        android:textColor="@color/design_default_color_on_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signupBtn" />
+
+    <Button
+        android:id="@+id/subirbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+        android:onClick="goToVideoCreateView"
+        android:text="Registrar Vídeos"
+        android:textColor="@color/design_default_color_on_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerbtn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
