@@ -158,4 +158,14 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent = new Intent(this,VideoListView.class);
         startActivity(intent);
     }
+
+    public void goToVideoCreateView(View view){
+        Intent intent = new Intent(this,VideoCreateView.class);
+        startActivity(intent);
+    }
+
+    public void goToRegistrarPaciente(View view){
+        Intent intent = new Intent(this,RegistrarPaciente.class);
+        startActivity(intent);
+    }
 }
