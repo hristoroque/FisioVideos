@@ -1,23 +1,95 @@
 package com.example.fisiovideos;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
+import com.example.fisiovideos.video.Video;
 import com.firebase.ui.auth.AuthUI;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class VideoDetailView extends AppCompatActivity {
+    private static final String PATH_VIDEOS = "videos";
+    String user_name;
+
+    private TextView tv_tittle;
+    private TextView tv_description;
+    private AppCompatImageView imgPhoto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_detail_view);
+        user_name = getIntent().getStringExtra("USER");
+
+        initialComponents();
+        getFirebaseData();
+    }
+
+    private void initialComponents() {
+        tv_tittle = (TextView)findViewById(R.id.title);
+        tv_description = (TextView)findViewById(R.id.description);
+        imgPhoto = (AppCompatImageView)findViewById(R.id.imgPhoto);
+    }
+
+    private void getFirebaseData() {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference reference = database.getReference(PATH_VIDEOS);
+
+        reference.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String previousChildName) {
+
+                Video video_data = dataSnapshot.getValue(Video.class);
+                video_data.setId(dataSnapshot.getKey());
+                if(video_data.getName().equals(user_name)){
+                    tv_tittle.setText(video_data.getName());
+                    tv_description.setText(video_data.getDescription());
+
+                    RequestOptions options = new RequestOptions().diskCacheStrategy(DiskCacheStrategy.ALL).centerCrop();
+                    Glide.with(VideoDetailView.this).load(video_data.getPhotoUrl()).apply(options).into(imgPhoto);
+                }
+
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot snapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 
     public void goToVideoListView(View view){
